@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/blink-ecom/static/css/main.b414dd96.css",
+    "main.js": "/blink-ecom/static/js/main.c5964bb8.js",
+    "index.html": "/blink-ecom/index.html",
+    "main.b414dd96.css.map": "/blink-ecom/static/css/main.b414dd96.css.map",
+    "main.c5964bb8.js.map": "/blink-ecom/static/js/main.c5964bb8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b414dd96.css",
+    "static/js/main.c5964bb8.js"
+  ]
+}
