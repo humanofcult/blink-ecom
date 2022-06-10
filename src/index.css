@@ -1,13 +1,289 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import 'antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #DFDFDE;
 }
+
+header
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.wrapper
+{
+    height: 50%;
+}
+
+.navbar
+{
+    margin: auto;
+    width: 100%;
+    justify-content: space-between;
+    height: 4rem;
+    background-color: #333333;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.navbar img
+{
+    width: 40%;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(305deg) brightness(116%) contrast(104%);
+}
+
+footer
+{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(240, 240, 240);
+  font-family: 'Raleway', sans-serif;
+  padding-top: 3%;
+  margin-top: auto;
+}
+
+footer li
+{
+  list-style: none;
+  margin-top: 10%;
+}
+
+footer li a
+{
+    color: #333333;
+}
+
+footer ul
+{
+  margin: 0%;
+}
+
+footer p
+{
+  margin-top: 1%;
+  color: #333333;
+}
+
+.mainSection
+{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    background-color: white;
+}
+
+main
+{
+    display: flex;
+    margin: auto;
+    width: 75%;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    margin-left: 5%;
+    background-color: white;
+}
+
+main .item
+{
+    margin-left: 15%;
+}
+
+main .item
+{
+    width: 15rem;
+    margin-bottom: 50px;
+    background-color: #ededed;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+main .item img 
+{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+main .imgContainer
+{
+    width: 15rem;
+    height: 15rem;
+}
+
+aside
+{
+    width: 20%;
+    height: 50rem;
+    background-color: #DFDFDE;
+    margin-top: 10rem;
+}
+
+.slideContainer
+{
+    width: 60rem;
+    height: 30rem;
+    background-color: #333333;
+    margin: auto;
+    margin-bottom: 7rem;
+    margin-top: 7rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 15px 40px rgb(67, 67, 67);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+ .controllers
+{
+    position: absolute;
+    z-index: 1;
+    width: 60rem;
+    height: 30rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.slideController
+{
+    width: 20%;
+    height: 100%;
+    opacity: 0%;
+    transition: all 0.3s ease-in-out;
+    pointer-events:all;
+
+}
+
+.slideController:hover
+{
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.leftSlide
+{
+    position: inherit;
+    background-image: linear-gradient(-0.25turn, rgba(255,255,255, 0), black);
+    left: 0;
+}
+
+.rightSlide
+{
+    position: inherit;
+    background-image: linear-gradient(0.25turn, rgba(255,255,255, 0), black);
+    right: 0;
+}
+
+.sliderItem
+{
+    width: 100%;
+    height: 30rem;
+    text-align: center;
+    background-color: rgb(76, 76, 76);
+}
+
+.sliderItem img
+{
+    width: 100%;
+    height: 30rem;
+}
+
+.item
+{
+    transition: all 0.3s ease-in-out;
+}
+
+.item:hover
+{
+    box-shadow: 0px 5px 20px rgb(181, 181, 181);
+}
+
+.item:hover .addToCart
+{
+  height: 100%;
+}
+
+.addToCart
+{
+  width: 100%;
+  background-color: #8D8DAA;
+  top: 0;
+  height: 0%;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  text-align: center;
+  z-index: -1;
+}
+
+.otherInfoAndCartAdder
+{
+  width: 100%;
+  height: 7.5rem;
+}
+
+.itemOtherInfo
+{
+  margin-left: 1rem;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.item:hover .itemOtherInfo
+{
+  height: 70%;
+}
+
+.itemOtherInfo h2
+{
+  margin-top: 0.5rem;
+}
+
+.orderItemImageContainer
+{
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+}
+
+.orderItemImageContainer img
+{
+  width: 100%;
+  height: 100%;
+}
+
+.orderItem
+{
+  width: 18rem;
+  height: 5rem;
+  flex-direction: row;
+}
+
+.orderItem .titleAndPrice
+{
+  margin-left: 1rem;
+}
+
+
+
